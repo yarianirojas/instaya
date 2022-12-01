@@ -1,26 +1,58 @@
+import { useState } from 'react';
 import '../css/log2.css';
 import logo from "../img/Lg.jpg"
+import { Button, Form } from "react-bootstrap";
+import LogoyTitulo from '../components/logoytitulo';
 
 const Registrar = () => {
-    return (
-        <div class="login-box">
-        <img src={logo} class="avatar" alt="Avatar Image"/>
-        <h1>Registrarse</h1>
-        <h2>Usted debe registrarse para seguir teniendo acceso a los servicios que usa de InstaYa         
-        </h2>
-        <form>
-          <label for="Nombre">Nombre</label>
-          <input type="text" placeholder="Ingresar Nombre"/>
-          <label for="Correo">Correo electronico</label>
-          <input type="email" placeholder="Ingresar Correo"/>
-           <label for="username">Usuario</label>
-           <input type="text" placeholder="Ingresar Usuario"/>
-           <label for="password">Contraseña</label>
-           <input type="password" placeholder="Ingresar Contraseña"/>
-          <input type="submit" value="Enviar"/>
-        </form>
-     </div>
-    );
+
+  const [nombre, setNombre] = useState('');
+  const [correo, setCorreo] = useState('');
+  const [usuario, setUsuario] = useState('');
+  const [password, setPassword] = useState('');
+  
+  const registrar = (e) => {
+    const objetoUsuario = {
+      "nombre": nombre,
+      "correo": correo,
+      "usuario": usuario,
+      "password": password
+    };
+    console.log("usuario a registrar", objetoUsuario);
+    e.preventDefault();
+  }
+
+
+  return (
+    <div className="login-box">
+      <LogoyTitulo titulo="Registrarse"></LogoyTitulo>
+      <h6 >Usted debe registrarse para seguir teniendo acceso a los servicios que usa de InstaYa
+      </h6>
+      <form>
+      <Form.Label>Nombre</Form.Label>
+      <Form.Control type="text"
+          placeholder="Ingresar Nombre"
+          value={nombre}
+          onChange={e => setNombre(e.target.value)} />
+        <Form.Label>Correo Electronico</Form.Label>
+        <Form.Control type="text"
+          placeholder="Ingresar Nombre"
+          value={correo}
+          onChange={e => setCorreo(e.target.value)} />
+        <Form.Label>Usuario</Form.Label>
+        <Form.Control type="text"
+          placeholder="Ingresar Usuario"
+          value={usuario}
+          onChange={e => setUsuario(e.target.value)} />
+        <Form.Label>Contraseña</Form.Label>
+        <Form.Control type="password"
+          placeholder="Ingresar Password"
+          value={password}
+          onChange={e => setPassword(e.target.value)} />
+        <input type="submit" value="Registrar" onClick={(e) => registrar(e)} />
+      </form>
+    </div>
+  );
 }
 
 export default Registrar

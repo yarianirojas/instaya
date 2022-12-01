@@ -84,3 +84,6 @@ body {
   .login-box a:hover {
     color: #fff;
   }
+  h6{
+    text-align: center;
+  }

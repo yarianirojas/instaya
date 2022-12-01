@@ -5,40 +5,7 @@ const Inicio = () => {
     return (
         <section>
         <div class="row no-gutters"> 
-            <div class="col-lg-1 border-right">
-                <div class="d-flex">
-                    <div class="aling-self-center mx-auto">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-11">
-              <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand text-light px-5" href="#"> <span class="font-weight-bold"></span></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                    
-                    </li>
-                    <li class="nav-item">
-                    
-                    </li>
-                    <li class="nav-item">
-                     
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-light  lead-xl" href="#"><i class="icon ion-md-menu"></i></a>
-                    </li>
-
-                  </ul>
-                  
-                </div>
-              </nav>
-
-            </div>
+           
         </div>
         <div class="row no-gutters">
           <div class="col-lg-1 d-none d-lg-block border-right">
@@ -82,12 +49,7 @@ const Inicio = () => {
           </div>
                 
              
-            </div>
-
-         
-
-        
-        
+            </div>            
     </section>
     
     );

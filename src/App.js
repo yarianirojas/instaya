@@ -1,6 +1,7 @@
 
 import './App.css';
 
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link, Routes }
   from "react-router-dom"
@@ -9,34 +10,34 @@ import Registrar from './vistas/registrar';
 import Inicio from './vistas/inicio';
 import Gestionp from './vistas/gestionp';
 import Recogida from './vistas/recogida';
+import Navbar from './components/Navbar';
+import NameFormWithFormValidation from './components/NameFormWithFormValidation';
+import React from 'react';
 
 
 
 function App() {
+
   return (
     <Router>
+      <Navbar />
       <div>
-        <ul>
-          <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/login">Login</Link></li>
-          <li><Link to="/reg">Registrar</Link></li>
-          <li><Link to="/gestion">Gestionp</Link></li>
-          <li><Link to="/recogida">Recogida</Link></li>
-
-        </ul>
-      
-      
+        {/*  <h2>Validaci&oacute;n a nivel de formulario:</h2>
+        <NameFormWithFormValidation />
+      <br /> */}
         <Routes>
-          <Route exact path="/" element={<Inicio/>}></Route>
-          <Route exact path="/login" element={<Login/>}></Route>
-          <Route path="/reg" element={<Registrar/>}></Route>
-          <Route path="/gestion" element={<Gestionp/>}></Route>
-          <Route path="/recogida" element={<Recogida/>}></Route>
-          
+          <Route exact path="/" element={<Inicio />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+          <Route path="/reg" element={<Registrar />}></Route>
+          <Route path="/gestion" element={<Gestionp />}></Route>
+          <Route path="/recogida" element={<Recogida />}></Route>
+
         </Routes>
-        </div>
+      </div>
     </Router>
-    
+
+
+
   );
 }
 
